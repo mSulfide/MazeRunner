@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class Maze
 {
-    public MazeCell[,] Cells;
-    public Vector2Int FinishPosition;
+    private MazeCell[,] _cells;
+
+    public Maze(MazeCell[,] maze)
+    {
+        _cells = maze;
+    }
+
+    public static implicit operator MazeCell[,](Maze maze) => maze._cells; 
 }
 
 public class MazeCell

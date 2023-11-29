@@ -27,10 +27,9 @@ public class MazeGenerator
 
         RemoveWallsWithBacktracker(cells);
 
-        Maze maze = new Maze();
-
-        maze.Cells = cells;
-        maze.FinishPosition = PlaceMazeExit(cells);
+        Maze maze = new Maze(cells);
+        
+        PlaceMazeExit(cells);
 
         return maze;
     }
